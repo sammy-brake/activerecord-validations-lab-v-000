@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
   validates :category, inclusion: { in: %w(Fiction Nonfiction) }
 
 
-  def clicbate
+  def validate 
     if !(self.title.include?("Won't Believe") || self.title.include?( "Secret") || self.title.include?("Top [number]") || self.title.include?("Guess"))
       errors.add(:title, "not clickbate")
     end
