@@ -5,6 +5,6 @@ class Post < ActiveRecord::Base
   validates :category, inclusion: { in: %w(Fiction Nonfiction) }
 
   def validate
-    
+
   end
 end
