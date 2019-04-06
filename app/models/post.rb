@@ -10,10 +10,10 @@ class Post < ActiveRecord::Base
 
   def clickbait
     binding.pry
-    if self.title 
+    if self.title
       if !(self.title.include?("Won't Believe") || self.title.include?( "Secret") || self.title.include?("Top [number]") || self.title.include?("Guess"))
         errors.add(:title, "not clickbate")
       end
-    end 
+    end
   end
 end
