@@ -5,6 +5,6 @@ class Post < ActiveRecord::Base
   validates :category, inclusion: { in: %w(Fiction Nonfiction) }
 
   def validate
-    self.include?("Won't Believe" || "Secret" || "Top [number]" || "Guess")
+    self.include?("Won't Believe") || self.include?( "Secret") || self.include?("Top [number]") || self.include?("Guess")
   end
 end
